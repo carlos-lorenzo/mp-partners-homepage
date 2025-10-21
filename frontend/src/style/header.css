@@ -1,0 +1,20 @@
+#header {
+    position: fixed;
+    top: 0;
+    width: 95vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    place-self: center;
+    background-color: transparent;
+    z-index: 1;
+}
+
+#menu-desktop {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+

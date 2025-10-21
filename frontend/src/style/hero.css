@@ -1,0 +1,66 @@
+/* Hero area */
+#hero {
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* content sits in left column visually centered */
+    background-image: url('../assets/hero_background.jpg');
+    background-position: center right;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle dark overlay to make text pop */
+#hero::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.12) 60%);
+    pointer-events: none;
+}
+
+/* Center the content inside the left grid column while keeping text left aligned */
+#hero-content{
+    grid-column: 1 / 2;
+    align-self: center; /* vertical centering within the hero */
+    justify-self: center; /* center inside its grid cell */
+    max-width: 720px;
+    width: calc(100% - 48px);
+    padding: 48px 24px;
+    position: relative; /* above overlay */
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* keep text blocks left-aligned */
+    color: #fff;
+}
+
+#hero-content h2{
+    font-size: 3rem;
+    line-height: 1.03;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+#hero-content p{
+    margin: 0 0 20px 0;
+    font-size: 1.125rem;
+    color: var(--text);
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 900px){
+    #hero{ grid-template-columns: 1fr; height: auto; padding: 60px 0; }
+    #hero::before{ background: rgba(0,0,0,0.35); }
+    #hero-content{ grid-column: 1 / -1; justify-self: start; padding: 36px 20px; }
+    #hero-content h2{ font-size: 2.25rem; }
+}
+
+@media (max-width: 480px){
+    #hero-content{ padding: 28px 16px; }
+    #hero-content h2{ font-size: 1.6rem; }
+    #hero-content p{ font-size: 1rem; }
+    .call-to-action{ width: 100%; text-align: center; }
+}
