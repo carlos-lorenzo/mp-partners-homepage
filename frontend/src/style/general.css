@@ -1,34 +1,107 @@
 :root {
-    --text: #FFFFFF;
-    --background: #0D1F2D;
-    --primary: #54697A;
-    --secondary: #425b40;
-    --accent: #6f9a84;
+    --text: #0e1012;
+    --background: #fbfcfc;
+    --primary: #0D1F2D;
+    --secondary: #54697A;
+    --accent: #a495ac;
+
+    --text-50: #f1f2f4;
+--text-100: #e2e6e9;
+--text-200: #c5ccd3;
+--text-300: #a9b3bc;
+--text-400: #8c99a6;
+--text-500: #6f7f90;
+--text-600: #596673;
+--text-700: #434c56;
+--text-800: #2c333a;
+--text-900: #16191d;
+--text-950: #0b0d0e;
+
+--background-50: #f0f4f4;
+--background-100: #e2e9e9;
+--background-200: #c5d3d3;
+--background-300: #a8bdbd;
+--background-400: #8ba7a7;
+--background-500: #6e9191;
+--background-600: #587474;
+--background-700: #425757;
+--background-800: #2c3a3a;
+--background-900: #161d1d;
+--background-950: #0b0f0f;
+
+--primary-50: #ebf3f9;
+--primary-100: #d7e7f4;
+--primary-200: #b0d0e8;
+--primary-300: #88b8dd;
+--primary-400: #61a0d1;
+--primary-500: #3989c6;
+--primary-600: #2e6d9e;
+--primary-700: #225277;
+--primary-800: #17374f;
+--primary-900: #0b1b28;
+--primary-950: #060e14;
+
+--secondary-50: #f0f2f5;
+--secondary-100: #e1e6ea;
+--secondary-200: #c3cdd5;
+--secondary-300: #a5b4c0;
+--secondary-400: #879bab;
+--secondary-500: #698296;
+--secondary-600: #546878;
+--secondary-700: #3f4e5a;
+--secondary-800: #2a343c;
+--secondary-900: #151a1e;
+--secondary-950: #0a0d0f;
+
+--accent-50: #f3f1f4;
+--accent-100: #e6e2e9;
+--accent-200: #cec6d2;
+--accent-300: #b5a9bc;
+--accent-400: #9d8da5;
+--accent-500: #84708f;
+--accent-600: #6a5a72;
+--accent-700: #4f4356;
+--accent-800: #352d39;
+--accent-900: #1a161d;
+--accent-950: #0d0b0e;
+}
+
+@font-face {
+    font-family: 'LTHoop-Thin';
+    src: url("../assets/fonts/LTHoop-Thin.ttf");
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: 'LTHoop-Light';
+    src: url("../assets/fonts/LTHoop-Light.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'LTHoop-Bold';
+    src: url("../assets/fonts/LTHoop-Bold.ttf");
+    font-weight: bold;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'LTHoop-Light', sans-serif;
     background-color: var(--background);
     color: var(--text);
 }
 
-
-.call-to-action{
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #ff6b6b, #ff3b3b);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    transition: box-shadow 180ms ease, opacity 180ms ease;
+#root {
+    margin: 0;
+    padding: 0;
 }
 
-.call-to-action:hover{
-    box-shadow: 0 14px 30px rgba(0,0,0,0.28);
+.call-to-action {
+    background-color: var(--accent);
+    color: var(--background);
+    border-radius: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
