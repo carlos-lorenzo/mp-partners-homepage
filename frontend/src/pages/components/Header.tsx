@@ -1,6 +1,8 @@
-
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
+import { motion, useScroll, useMotionValueEvent } from "framer-motion"
+import { useState } from 'react';
+
 import HamburgerMenu from './HamburgerMenu';
 
 import "../../style/header.css"
@@ -9,10 +11,22 @@ export default function Header() {
     const navigate = useNavigate()
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     const location = useLocation();
-    
+    const { scrollY } = useScroll();
+    const [headerStyle, setHeaderStyle] = useState({
+        backgroundColor: 'transparent',
+    });
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const isScrolled = latest > window.innerHeight * 0.3;
+        setHeaderStyle({
+            backgroundColor: isScrolled ? 'var(--primary)' : 'transparent',
+        });
+    })
 
     return (
-        <div id='header'>
+        <motion.div id='header'
+            style={headerStyle}
+        >
             <div id="header-logo">
                 <img src="../assets/White_Logo.png" alt="MP Partners Logo" />
             </div>
@@ -41,6 +55,6 @@ export default function Header() {
                     </div>
                 </nav>
             )}
-        </div>
+        </motion.div>
     )
 }

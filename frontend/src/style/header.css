@@ -1,7 +1,9 @@
 #header {
     position: fixed;
     top: 0;
-    width: 90vw;
+    width: calc(100vw - 4rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
     height: 10dvh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -9,6 +11,7 @@
     place-self: center;
     background-color: transparent;
     z-index: 1;
+    transition: background-color 0.3s ease;
 }
 
 #menu-desktop {

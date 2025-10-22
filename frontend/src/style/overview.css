@@ -3,12 +3,36 @@
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    height: 50dvh;
+    height: fit-content;
     margin-bottom: 100dvh;
-    margin: 1rem;
+    margin: 1rem ;
+    gap: 4rem;
+    overflow-x: hidden;
+}
+
+#overview-content {
+    width: 50%;
+    margin-left: 5rem;
 }
 
 #overview-title {
     text-align: center;
     place-self: center;
+    border-left: solid 2px var(--text);
+    border-right: solid 2px var(--text);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.horizontal-scroll {
+    width: fit-content;
+    position: relative;
+    display: block;
+}
+
+.horizontal-scroll h1 {
+    font-size: 10rem;
+    opacity: 0.4;
+    font-weight: 900;
+    color: var(--secondary);
 }

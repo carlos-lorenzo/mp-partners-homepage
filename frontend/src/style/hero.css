@@ -1,6 +1,6 @@
 /* Hero area */
 #hero {
-    height: 60dvh;
+    height: 100dvh;
     display: grid;
     grid-template-columns: 1fr 1fr; /* content sits in left column visually centered */
     background: #bdc3c7;  /* fallback for old browsers */
@@ -19,7 +19,7 @@
     justify-self: center; /* center inside its grid cell */
     max-width: 720px;
     
-    
+    padding-left: 1rem;
     position: relative; /* above overlay */
     z-index: 0;
     display: flex;
