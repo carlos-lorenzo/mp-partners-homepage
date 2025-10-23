@@ -60,3 +60,15 @@
     margin: 1rem 0;
     cursor: pointer;
 }
+
+
+.hamburger-option {
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+.hamburger-option.selected {
+    background-color: var(--secondary);
+    transition: all 0.3s ease;
+    color: var(--background);
+}

@@ -1,15 +1,18 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import '../../style/hamburger.css';
 
 export default function HamburgerMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
-
+    const location = useLocation();
+    
     const handleNavigate = (path: string) => {
         navigate(path);
         setIsOpen(false);
     };
+
+
 
     return (
         <>
@@ -19,16 +22,17 @@ export default function HamburgerMenu() {
                 <div />
             </button>
 
+
             {isOpen && (
                 <div className="hamburger-overlay">
                     <button className="close-button" onClick={() => setIsOpen(false)} aria-label="Close menu">&times;</button>
                     <nav className="hamburger-nav">
-                        <p onClick={() => handleNavigate('/')}>Home</p>
-                        <p onClick={() => handleNavigate('/about')}>About</p>
-                        <p onClick={() => handleNavigate('/services')}>Services</p>
-                        <p onClick={() => handleNavigate('/team')}>Team</p>
+                        <p onClick={() => handleNavigate('/')} className={`hamburger-option` + (location.pathname === '/' ? ' selected' : '')}>Home</p>
+                        <p onClick={() => handleNavigate('/about')} className={`hamburger-option` + (location.pathname === '/about' ? ' selected' : '')}>About</p>
+                        <p onClick={() => handleNavigate('/services')} className={`hamburger-option` + (location.pathname === '/services' ? ' selected' : '')}>Services</p>
+                        <p onClick={() => handleNavigate('/team')} className={`hamburger-option` + (location.pathname === '/team' ? ' selected' : '')}>Team</p>
                         <div className='call-to-action menu-option'>
-                            <p onClick={() => handleNavigate('/contact')}>Contact Us</p>
+                            <p onClick={() => handleNavigate('/contact')} className={`hamburger-option` + (location.pathname === '/contact' ? ' selected' : '')}>Contact Us</p>
                         </div>
                     </nav>
                 </div>
