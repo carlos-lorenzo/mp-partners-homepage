@@ -44,8 +44,8 @@
 }
 
 .card-back {
-    background-color: var(--secondary-200);
-    color: var(--text);
+    background-color: var(--secondary-300);
+    color: var(--background);
     transform: rotateY(180deg);
 }
 

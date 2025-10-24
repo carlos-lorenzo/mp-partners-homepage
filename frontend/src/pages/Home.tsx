@@ -12,6 +12,7 @@ export default function Home() {
         <div id='home-page'>
             <Hero />
             <Overview />
+            <Value />
             <Partners />
         </div>
     )

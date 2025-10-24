@@ -34,18 +34,6 @@
     padding-right: 0.5rem;
 }
 
-.horizontal-scroll {
-    width: fit-content;
-    position: relative;
-    display: block;
-}
-
-.horizontal-scroll h1 {
-    font-size: 10rem;
-    opacity: 0.4;
-    font-weight: 900;
-    color: var(--secondary);
-}
 
 @media (max-width: 768px) {
     #overview-content {
@@ -61,7 +49,5 @@
         font-size: 1em;
     }
 
-    .horizontal-scroll h1 {
-        font-size: 5rem;
-    }
+    
 }

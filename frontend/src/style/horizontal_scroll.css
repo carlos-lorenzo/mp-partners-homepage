@@ -1,0 +1,21 @@
+.horizontal-scroll {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 20dvh;
+    padding: 0;
+    margin: 0;
+}
+
+.horizontal-scroll h1 {
+    font-size: 6rem;
+    white-space: nowrap;
+    color: var(--accent-700);
+}
+
+
+@media (max-width: 768px) {
+    .horizontal-scroll h1 {
+        font-size: 4rem;
+    }
+}

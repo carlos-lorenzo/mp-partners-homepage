@@ -68,19 +68,19 @@
 
 @font-face {
     font-family: 'LTHoop-Thin';
-    src: url("../assets/fonts/LTHoop-Thin.ttf");
+    src: url("/fonts/LTHoop-Thin.ttf");
     font-weight: thin;
 }
 
 @font-face {
     font-family: 'LTHoop-Light';
-    src: url("../assets/fonts/LTHoop-Light.ttf");
+    src: url("/fonts/LTHoop-Light.ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'LTHoop-Bold';
-    src: url("../assets/fonts/LTHoop-Bold.ttf");
+    src: url("/fonts/LTHoop-Bold.ttf");
     font-weight: bold;
 }
 
