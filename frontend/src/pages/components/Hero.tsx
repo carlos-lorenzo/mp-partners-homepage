@@ -1,10 +1,15 @@
 import "../../style/hero.css"
+import HeroWord from "./HeroWord"
+
 
 export default function Hero() {
      return (
         <section id='hero'>
             <div id="hero-content">
-                <h1>Securing the <b><u>CAPITAL</u></b> to Fuel <b><u>YOUR</u></b> Vision</h1>
+                <HeroWord text="Navigating" />
+                <HeroWord text="Startups" />
+                <HeroWord text="Alternative" />
+                <HeroWord text="Industries" />
             </div>
         </section>
     )

@@ -2,7 +2,9 @@ import React from 'react'
 
 import Hero from './components/Hero'
 import Overview from './components/Overview'
-import HorizontalScroll from './components/HorizontalScroll'
+import Partners from './components/Partners'
+import Value from './components/Value'
+
 import "../style/home.css"
 
 export default function Home() {
@@ -10,6 +12,7 @@ export default function Home() {
         <div id='home-page'>
             <Hero />
             <Overview />
+            <Partners />
         </div>
     )
 }

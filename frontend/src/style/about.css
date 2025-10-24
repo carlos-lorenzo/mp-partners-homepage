@@ -1,0 +1,29 @@
+#about-page {
+    margin-top: calc(10dvh + 3rem);
+}
+
+#about-title {
+    text-align: center;
+    place-self: center;
+    border-left: solid 2px var(--text);
+    border-right: solid 2px var(--text);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#about-subtitle {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+#about-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--text);
+}

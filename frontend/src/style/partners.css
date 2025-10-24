@@ -1,0 +1,41 @@
+#partners-section {
+    padding: 4rem 2rem;
+    background-color: var(--background-50);
+    text-align: center;
+}
+
+#partners-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+
+.partner-logo {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.partner-logo:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    #partners-banner {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .partner-logo {
+        width: 50vw;
+    }
+
+    .partner-logo:hover {
+        transform: scale(1);
+    }
+}

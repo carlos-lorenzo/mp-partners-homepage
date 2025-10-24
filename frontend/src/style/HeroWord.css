@@ -1,0 +1,22 @@
+.word {
+    /* relative block overflow-hidden whitespace-nowrap text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl */
+    position: relative;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 4rem; /* text-4xl */
+    font-weight: 900;
+    text-transform: uppercase;
+
+}
+
+.hidden-word {
+    position: absolute;
+    top: 0;
+}
+
+@media (max-width: 640px) {
+    .word {
+        font-size: 3rem; /* sm:text-7xl */
+    }
+}

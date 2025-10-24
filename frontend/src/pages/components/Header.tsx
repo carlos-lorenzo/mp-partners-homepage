@@ -1,57 +1,78 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import HamburgerMenu from './HamburgerMenu';
 
 import "../../style/header.css"
 
 export default function Header() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+    const [headerOpaque, setHeaderOpaque] = useState(false);
+
     const location = useLocation();
     const { scrollY } = useScroll();
-    const [headerStyle, setHeaderStyle] = useState({
-        backgroundColor: 'transparent',
-    });
+
+    
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        const isScrolled = latest > window.innerHeight * 0.3;
-        setHeaderStyle({
-            backgroundColor: isScrolled ? 'var(--primary)' : 'transparent',
-        });
+        if (location.pathname !== '/') {
+            setHeaderOpaque(true);
+            return;
+        }
+
+        setHeaderOpaque(latest > window.innerHeight * 0.3);
     })
+
+    useEffect(() => {
+        if (location.pathname !== '/') {
+            setHeaderOpaque(true);   
+        }
+        
+
+    }, []);
+
+    function handleNavigate(path: string) {
+        if (location.pathname === path) return;
+        if (path === '/') {
+            setHeaderOpaque(false);
+        } else {
+            setHeaderOpaque(true);
+        }
+        
+        navigate(path);
+    }
+
+
 
     return (
         <motion.div id='header'
-            style={headerStyle}
+            className={headerOpaque ? 'header-opaque' : 'header-transparent'}
         >
             <div id="header-logo">
                 <img src="../assets/White_Logo.png" alt="MP Partners Logo" />
             </div>
             {isMobile ? (
-                <HamburgerMenu />
+                <HamburgerMenu handleNavigate={handleNavigate}/>
             ) : (
                 <nav id='menu-desktop'>
-                    <div className={`menu-option` + (location.pathname === '/' ? ' selected' : '')}>
-                        <p onClick={() => navigate('/')}>Home</p>
+                    <div className={`menu-option` + (location.pathname === '/' ? ' selected' : '')} onClick={() => handleNavigate('/')}>
+                        <p><b>Home</b></p>
                     </div>
 
-                    <div className={`menu-option` + (location.pathname === '/about' ? ' selected' : '')}>
-                        <p onClick={() => navigate('/about')}>About</p>
+                    <div className={`menu-option` + (location.pathname === '/about' ? ' selected' : '')} onClick={() => handleNavigate('/about')}>
+                        <p><b>About</b></p>
                     </div>
 
-                    <div className={`menu-option` + (location.pathname === '/services' ? ' selected' : '')}>
-                        <p onClick={() => navigate('/services')}>Services</p>
+                    <div className={`menu-option` + (location.pathname === '/services' ? ' selected' : '')} onClick={() => handleNavigate('/services')}>
+                        <p><b>Services</b></p>
                     </div>
 
-                    <div className={`menu-option` + (location.pathname === '/team' ? ' selected' : '')}>
-                        <p onClick={() => navigate('/team')}>Team</p>
-                    </div>
 
-                    <div className={`call-to-action menu-option` + (location.pathname === '/contact' ? ' selected' : '')}>
-                        <p onClick={() => navigate('/contact')}>Contact Us</p>
+                    <div className={`call-to-action menu-option` + (location.pathname === '/contact' ? ' selected' : '')} onClick={() => navigate('/contact')}>
+                        <p><b>Contact Us</b></p>
                     </div>
                 </nav>
             )}

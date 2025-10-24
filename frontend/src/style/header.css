@@ -9,9 +9,17 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     place-self: center;
-    background-color: transparent;
     z-index: 1;
+    
+}
+
+.header-opaque {
+    
+    background-color: var(--primary);
+}
+.header-transparent {
     transition: background-color 0.3s ease;
+    background-color: transparent;
 }
 
 #menu-desktop {
