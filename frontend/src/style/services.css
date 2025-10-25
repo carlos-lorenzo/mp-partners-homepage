@@ -1,0 +1,81 @@
+.services-container {
+    padding: 4rem 2rem;
+    max-width: 50vw;
+    margin: 10dvh auto;
+    color: var(--text);
+}
+
+.services-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-intro h1 {
+    font-family: 'LTHoop-Bold', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.services-intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--secondary);
+}
+
+.accordion-container {
+    border-top: 1px solid var(--secondary-200);
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--secondary-200);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    background-color: var(--background);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.accordion-header:hover {
+    background-color: var(--background-50);
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-family: 'LTHoop-Bold', sans-serif;
+    font-size: 1.25rem;
+    color: var(--primary-800);
+}
+
+.accordion-header svg {
+    color: var(--secondary);
+}
+
+.accordion-content {
+    overflow: hidden;
+}
+
+.accordion-content p {
+    padding: 0 1rem 1.5rem 1rem;
+    margin: 0;
+    line-height: 1.7;
+    color: var(--secondary-600);
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        max-width: 90vw;
+        padding: 2rem 1rem;
+    }
+
+    .services-intro h1 {
+        font-size: 2rem;
+    }
+}

@@ -48,7 +48,7 @@ export default function Header() {
 
 
     return (
-        <motion.div id='header'
+        <motion.header id='header'
             className={headerOpaque ? 'header-opaque' : 'header-transparent'}
         >
             <div id="header-logo">
@@ -71,11 +71,11 @@ export default function Header() {
                     </div>
 
 
-                    <div className={`call-to-action menu-option` + (location.pathname === '/contact' ? ' selected' : '')} onClick={() => navigate('/contact')}>
+                    <div className={`call-to-action menu-option` + (location.pathname === '/contact' ? ' selected' : '')} onClick={() => handleNavigate('/contact')}>
                         <p><b>Contact Us</b></p>
                     </div>
                 </nav>
             )}
-        </motion.div>
+        </motion.header>
     )
 }

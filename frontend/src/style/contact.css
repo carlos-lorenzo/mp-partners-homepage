@@ -1,0 +1,137 @@
+.contact-page {
+    min-height: 100dvh;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10dvh;
+}
+
+.contact-page h1 {
+    margin-bottom: 2rem;
+    font-family: 'LTHoop-Bold', sans-serif;
+    color: var(--primary);
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: var(--background-50);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: 'LTHoop-Bold', sans-serif;
+    color: var(--primary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--secondary-200);
+    border-radius: 0.5rem;
+    background-color: var(--background);
+    font-family: 'LTHoop-Light', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-100);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+}
+
+.contact-form button:disabled {
+    background-color: var(--secondary-300);
+    cursor: not-allowed;
+}
+
+.success-message {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--background-50);
+    border-radius: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.success-message h2 {
+    color: var(--primary);
+    font-family: 'LTHoop-Bold', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    color: var(--secondary);
+}
+
+.success-message {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--background-50);
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.success-message h2 {
+    color: var(--primary);
+    font-family: 'LTHoop-Bold', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    .contact-page {
+        padding: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page {
+        padding: 1rem;
+    }
+
+    .contact-form {
+        padding: 1.25rem;
+    }
+}
