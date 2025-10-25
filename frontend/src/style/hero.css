@@ -3,11 +3,12 @@
     height: 100dvh;
     display: grid;
     grid-template-columns: 1fr 1fr; /* content sits in left column visually centered */
-    background: #bdc3c7;  /* fallback for old browsers */
+    background: var(--background);  /* fallback for old browsers */
     background: -webkit-linear-gradient(var(--primary), var(--background));  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(var(--primary), var(--background)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: 0;
     padding: 0;
+    font-family: 'LTHoop-Bold', sans-serif;
 
 }
 
